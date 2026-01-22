@@ -26,6 +26,7 @@ Celem projektu jest:
 ---
 
 ## Struktura projektu
+```txt
 parallel-downloader/
 ├── cli.py
 ├── downloader.py
@@ -33,7 +34,7 @@ parallel-downloader/
 ├── requirements.txt
 ├── Dockerfile
 └── README.md
-
+```
 
 ---
 
@@ -50,8 +51,8 @@ https://ftp.icm.edu.pl/pub/Linux/ubuntu-releases/22.04/ubuntu-22.04.3-live-serve
 ## Uruchomienie lokalne
 
 ### Wymagania
-Python 3.10 lub nowszy
-pip
+- Python 3.10 lub nowszy
+- pip
 
 ### Instalacja zależności
 ``` txt
@@ -102,7 +103,7 @@ MSYS_NO_PATHCONV=1 docker run --rm \
 ---
 
 ## Parametry programu
-```txt --urls ``` – ścieżka do pliku z adresami URL
+- ```txt --urls ``` – ścieżka do pliku z adresami URL
 - ``` txt --out ``` – katalog docelowy
 - ``` txt --concurrency ``` – maksymalna liczba jednoczesnych pobrań
 - ``` txt --retries ``` – liczba ponowień w przypadku błędów
