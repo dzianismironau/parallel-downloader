@@ -54,13 +54,19 @@ Python 3.10 lub nowszy
 pip
 
 ### Instalacja zależności
+``` txt
 pip install -r requirements.txt
+```
 
 ### Uruchomienie równoległe
+``` txt
 python cli.py --urls urls.txt --out downloads --concurrency 8
+```
 
 ### Uruchomienie sekwencyjne
+``` txt
 python cli.py --urls urls.txt --out downloads --sequential
+```
 
 ## Uruchomienie w Dockerze
 ### Budowa obrazu
@@ -93,13 +99,15 @@ MSYS_NO_PATHCONV=1 docker run --rm \
 ```
 ### Pobrane pliki zapisywane są w katalogu downloads na komputerze hosta.
 
+---
+
 ## Parametry programu
 ```txt --urls ``` – ścieżka do pliku z adresami URL
-``` txt --out ``` – katalog docelowy
-``` txt --concurrency ``` – maksymalna liczba jednoczesnych pobrań
-``` txt --retries ``` – liczba ponowień w przypadku błędów
-``` txt --timeout ``` – timeout żądania
-``` txt --sequential ``` – tryb sekwencyjny
+- ``` txt --out ``` – katalog docelowy
+- ``` txt --concurrency ``` – maksymalna liczba jednoczesnych pobrań
+- ``` txt --retries ``` – liczba ponowień w przypadku błędów
+- ``` txt --timeout ``` – timeout żądania
+- ``` txt --sequential ``` – tryb sekwencyjny
 
 ## Uwagi
 Niektóre publiczne serwery mogą ograniczać dostęp z kontenerów Docker. W testach zaleca się korzystanie z serwerów zapewniających stabilne połączenie.
