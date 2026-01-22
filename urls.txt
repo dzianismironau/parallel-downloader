@@ -1,0 +1,4 @@
+https://speedtest.orange.pl/files/10MB.bin
+https://speedtest.orange.pl/files/100MB.bin
+https://speedtest.t-mobile.pl/10MB.zip
+https://ftp.icm.edu.pl/pub/Linux/ubuntu-releases/22.04/ubuntu-22.04.3-live-server-amd64.iso
