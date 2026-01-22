@@ -47,47 +47,47 @@ https://speedtest.orange.pl/files/100MB.bin
 https://ftp.icm.edu.pl/pub/Linux/ubuntu-releases/22.04/ubuntu-22.04.3-live-server-amd64.iso
 Uruchomienie lokalne
 
-##Wymagania
+## Wymagania
 Python 3.10 lub nowszy
 pip
 
-##Instalacja zależności
+## Instalacja zależności
 pip install -r requirements.txt
 
-##Uruchomienie równoległe
+## Uruchomienie równoległe
 python cli.py --urls urls.txt --out downloads --concurrency 8
 
-##Uruchomienie sekwencyjne
+## Uruchomienie sekwencyjne
 python cli.py --urls urls.txt --out downloads --sequential
 
-##Uruchomienie w Dockerze
-#Budowa obrazu
+## Uruchomienie w Dockerze
+# Budowa obrazu
 docker build -t parallel-downloader .
 
-##Uruchomienie (Linux / macOS)
+## Uruchomienie (Linux / macOS)
 docker run --rm \
   -v "$(pwd)/downloads:/app/downloads" \
   -v "$(pwd)/urls.txt:/app/urls.txt" \
   parallel-downloader \
   python cli.py --urls /app/urls.txt --out downloads --concurrency 8
 
-##Uruchomienie (Windows PowerShell)
+## Uruchomienie (Windows PowerShell)
 docker run --rm `
   -v "${PWD}\downloads:/app/downloads" `
   -v "${PWD}\urls.txt:/app/urls.txt" `
   parallel-downloader `
   python cli.py --urls /app/urls.txt --out downloads --concurrency 8
 
-##Uruchomienie (Windows Git Bash)
+## Uruchomienie (Windows Git Bash)
 MSYS_NO_PATHCONV=1 docker run --rm \
   -v "$(pwd -W)/downloads:/app/downloads" \
   -v "$(pwd -W)/urls.txt:/app/urls.txt" \
   parallel-downloader \
   python cli.py --urls /app/urls.txt --out downloads --concurrency 8
 
-#Pobrane pliki zapisywane są w katalogu downloads na komputerze hosta.
+# Pobrane pliki zapisywane są w katalogu downloads na komputerze hosta.
 
-##Parametry programu
+## Parametry programu
 --urls – ścieżka do pliku z adresami URL
 --out – katalog docelowy
 --concurrency – maksymalna liczba jednoczesnych pobrań
@@ -95,5 +95,5 @@ MSYS_NO_PATHCONV=1 docker run --rm \
 --timeout – timeout żądania
 --sequential – tryb sekwencyjny
 
-##Uwagi
+## Uwagi
 Niektóre publiczne serwery mogą ograniczać dostęp z kontenerów Docker. W testach zaleca się korzystanie z serwerów zapewniających stabilne połączenie.
